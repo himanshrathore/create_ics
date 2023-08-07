@@ -1,4 +1,4 @@
-#Code to create an N-body HDF5 initial condition file
+#Code to create a Gadget4 compatible N-body HDF5 initial condition file
 #Author: Himansh Rathore, July 2023
 #Last updated: Jul 10, 2023 by Himansh Rathore
 
