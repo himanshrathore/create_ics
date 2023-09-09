@@ -6,6 +6,12 @@ ic = "./ics_lmc_smc_infall.hdf5"
 
 #Accessing arrays - these should be numpy arrays. Position and velocity arrays should have dimension (3, N_particles).
 
+#For PartType0 (gas) - particle ids, positions, velocities, masses
+ic_part0_pids = "./ic_arrays/ic_part0_pids.npy"
+ic_part0_coord = "./ic_arrays/ic_part0_coord.npy"
+ic_part0_vel = "./ic_arrays/ic_part0_vel.npy"
+ic_part0_mass = "./ic_arrays/ic_part0_mass.npy"
+
 #For PartType1 (halo) - particle ids, positions, velocities, masses
 ic_part1_pids = "./ic_arrays/ic_part1_pids.npy"
 ic_part1_coord = "./ic_arrays/ic_part1_coord.npy"

@@ -1,6 +1,6 @@
 #Code to create a Gadget4 compatible N-body HDF5 initial condition file
 #Author: Himansh Rathore, July 2023
-#Last updated: Jul 10, 2023 by Himansh Rathore
+#Last updated: Sep 9, 2023 by Himansh Rathore
 
 import numpy as np
 import h5py
@@ -10,6 +10,12 @@ import param #parameter file param.py should be in the same directory as the scr
 print('Starting code...')
 
 #Accessing arrays
+
+#For PartType0 (gas)
+ic_part0_pids = np.load(param.ic_part0_pids)
+ic_part0_coord = np.load(param.ic_part0_coord)
+ic_part0_vel = np.load(param.ic_part0_vel)
+ic_part0_mass = np.load(param.ic_part0_mass)
 
 #For PartType1 (halo)
 ic_part1_pids = np.load(param.ic_part1_pids)
@@ -64,7 +70,31 @@ head.attrs['Time'] = 0.0 #since this is the ic
 
 print('Creating header of combined ic...')
 
-#Assuming no gas
+#creating PartType0 (gas)
+
+#creating ParticleIDs
+
+dset = f.create_dataset('/PartType0/ParticleIDs', shape = ic_part0_pids.shape, dtype = ic_part0_pids.dtype, data = ic_part0_pids)
+
+print("Creating particle IDs of PartType0...")
+
+#creating coordinates
+
+dset = f.create_dataset('/PartType0/Coordinates', shape = ic_part0_coord.shape, dtype = ic_part0_coord.dtype, data = ic_part0_coord)
+
+print("Creating coordinates of PartType0...")
+
+#creating velocities
+
+dset = f.create_dataset('/PartType0/Velocities', shape = ic_part0_vel.shape, dtype = ic_part0_vel.dtype, data = ic_part0_vel)
+
+print("Creating velocities of PartType0...")
+
+#creating masses
+
+dset = f.create_dataset('/PartType0/Masses', shape = ic_part0_mass.shape, dtype = ic_part0_mass.dtype, data = ic_part0_mass)
+
+print("Creating masses of PartType0...")
 
 #creating PartType1 (DM halo)
 
