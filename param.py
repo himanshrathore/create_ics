@@ -4,6 +4,16 @@
 #target ic file
 ic = "./ics_lmc_smc_infall.hdf5"
 
+#particle types (mention which ones in the form of a list)
+'''
+Currently supported particle types:
+PartType0 -> gas
+PartType1 -> halo
+PartType2 -> disk
+PartType5 -> black hole
+'''
+part_types = ['PartType0', 'PartType1', 'PartType2', 'PartType5']
+
 #Accessing arrays - these should be numpy arrays. Position and velocity arrays should have dimension (3, N_particles).
 
 #For PartType0 (gas) - particle ids, positions, velocities, masses
