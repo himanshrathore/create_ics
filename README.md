@@ -1,5 +1,5 @@
 # create_ics
-Create a Gadget4 compatible HDF5 N-body initial conditions file
+Create a Gadget-4 compatible HDF5 N-body initial conditions file directly from particle arrays.
 
 # Author
 Himansh Rathore, July 2023
@@ -13,3 +13,10 @@ python3 ./create_ic
 
 # Parameter file:
 See the supplied "param.py" for instructions.
+
+# Supported particle types:
+Currently, the following gadget particles types are supported: <br>
+PartType0 -> gas <br>
+PartType1 -> dark matter <br>
+PartType2 -> stellar disk <br>
+PartType5 -> black hole <br> 

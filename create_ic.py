@@ -1,6 +1,6 @@
 #Code to create a Gadget4 compatible N-body HDF5 initial condition file
 #Author: Himansh Rathore, July 2023
-#Last updated: Nov 2, 2023 by Himansh Rathore
+#Last updated: Feb 13, 2025 by Himansh Rathore
 
 import numpy as np
 import h5py
@@ -184,10 +184,4 @@ if('PartType5' in param.part_types):
     
 print("Done!")
 
-
-
-
-
-
-
-
+#end
